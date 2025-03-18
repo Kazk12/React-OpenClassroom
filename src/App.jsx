@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Banner from './components/Banner/Banner'
-import Cart from './components/Cart/Cart'
+import ShoppingList from './components/ShoppingList/ShoppingList'
+import logo from './assets/images/Logo.png'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,8 +11,12 @@ function App() {
   return (
     <main>
 
-      <Banner />
-      <Cart />
+<Banner>
+				<img src={logo} alt='La maison jungle' className='lmj-logo' />
+				<h1 className='lmj-title'>La maison jungle</h1>
+			</Banner>
+      <ShoppingList />
+			<Footer />
      
     </main>
   )
