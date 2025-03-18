@@ -5,6 +5,10 @@ function Footer() {
 
     const [inputValue, setInputValue] = useState('')
 
+    function handleInput(e) {
+		setInputValue(e.target.value)
+	}
+
     const handleBlur = () => {
         if (!inputValue.includes('@')) {
             alert("Attention, il n'y a pas d'@, ceci n'est pas une adresse valide.")
@@ -20,7 +24,7 @@ function Footer() {
 			</div>
 			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
             <form action="">
-            <input placeholder='Entrez votre mail' value={inputValue} onChange={(e) => setInputValue(e.target.value)} onBlur={handleBlur}>
+            <input placeholder='Entrez votre mail' value={inputValue} onChange={handleInput} onBlur={handleBlur}>
            
            </input>
            
