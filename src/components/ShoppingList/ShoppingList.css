@@ -1,11 +1,47 @@
 .lmj-shopping-list {
 	width: 100%;
-}
-
-.lmj-plant-list {
+	padding: 0 15px;
+  }
+  
+  .lmj-plant-list {
 	list-style-type: none;
-	padding: 32px;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 25px;
+	margin-top: 30px;
+  }
+  
+  .lmj-plant-list > div {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
+	flex-direction: column;
+  }
+  
+  .lmj-plant-list button {
+	margin: 10px auto 20px;
+	width: 80%;
+	padding: 12px 20px;
+	background-color: #3d5af1;
+	color: white;
+	border: none;
+	border-radius: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.85rem;
+	display: block;
+  }
+  
+  .lmj-plant-list button:hover {
+	background-color: #2c429c;
+	transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+	.lmj-plant-list {
+	  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	  gap: 15px;
+	}
+  }
